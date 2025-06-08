@@ -18,27 +18,34 @@ namespace FoodInspectorApp
             InitializeComponent();
             GetData();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nimesh\Documents\FoodInspectorAppDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=DSF11\SQLEXPRESS;Initial Catalog=FoodInspectorAppDB;Integrated Security=True;Connect Timeout=30");
 
         private void GetData()
         {
-            Con.Open();
-
-           
-
-         
-
-         
-            Con.Close();
+            try
+            {
+                Con.Open();
+                // Add your data retrieval logic here (e.g., query to populate controls)
+                MessageBox.Show("Database connected successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                Con.Close();
+            }
         }
+
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
+            // You can add initialization code here if needed
         }
 
         private void label18_Click(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -55,7 +62,6 @@ namespace FoodInspectorApp
             this.Hide();
         }
 
-
         private void label4_Click(object sender, EventArgs e)
         {
             Shop patient = new Shop();
@@ -70,10 +76,9 @@ namespace FoodInspectorApp
             this.Hide();
         }
 
-
         private void label8_Click(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -85,37 +90,37 @@ namespace FoodInspectorApp
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            // Add paint logic if needed
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            // Add paint logic if needed
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
 
         private void OPlusNumLbl_Click(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
 
         private void label6_Click_1(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
-
+            // Add functionality if needed
         }
     }
 }
